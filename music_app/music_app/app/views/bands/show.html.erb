@@ -1,0 +1,13 @@
+<h1>THIS IS <%= @band.name.upcase %>'S PAGE </h1>
+<a href="<%= edit_band_url(@band) %>">UPDATE NAME</a>
+<br><a href="<%= new_band_album_url(@band) %>">ADD ALBUM</a>
+
+<form action="<%= band_url(@band) %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="DELETE THIS BAND">
+  <br><h2>ALBUMS</h2>
+  <% @band.albums.each do |album| %>
+  <br>
+  <a href="<%= album_url(album) %>"><%= album.title %></a>
+  <% end %>
+</form>

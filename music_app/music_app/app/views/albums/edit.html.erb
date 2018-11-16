@@ -1,0 +1,20 @@
+<form action="<%= albums_url %>" method="post">
+  <br>
+  <label>
+    Title:
+    <input type="text" name="album[title]" value="<%= @album.title %>" >
+  </label>
+  <br>
+  <label>
+    Year:
+    <input type="text" name="album[year]" value="<%= @album.year %>">
+  </label>
+  <br>
+  <label>
+    Studio?
+    Yes
+    <input type="radio" name="album[studio]" value="T">
+    No
+    <input type="radio" name="album[studio]" value="F">
+  </label>
+</form>

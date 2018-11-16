@@ -1,0 +1,27 @@
+<form action="<%= albums_url %>" method="post">
+  <br>
+  <input type="hidden" name="album[band_id]" value="<%= @band.id %>">
+  <label>
+    Title:
+    <input type="text" name="album[title]">
+  </label>
+  <br>
+  <label>
+    Year:
+    <input type="text" name="album[year]">
+  </label>
+  <br>
+  <label>
+    Studio?
+    Yes
+    <input type="radio" name="album[studio]" value="T">
+    No
+    <input type="radio" name="album[studio]" value="F">
+  </label>
+  <input type="submit" value="submit">
+</form>
+
+<!-- #  band_id    :integer          not null
+#  title      :string           not null
+#  year       :integer          not null
+#  studio     :boolean          default(TRUE), not null -->
